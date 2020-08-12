@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>我的計數器</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+
+<body>
+
+
+    <div id="app">
+  {{ message }}
+  
+  <h1> My Counter!</h1>
+<h2 style="color:blue;">{{ans}}</h2>
+<p>Set Number:<input> </input></p>
+<button v-on:click="plusN">+1</button>
+<button v-on:click="minus">-1</button>
+<button v-on:click="reset">Reset</button>
+
+</div>
+
+
+
+
+
+
+
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    ans: 10,
+  },
+methods:{
+    plusN: function(){
+        this.ans +=1;},
+    minus: function(){
+        this.ans -=1;},
+    reset: function(){
+        this.ans =10;
+    }
+},
+
+})
+
+
+</script>
+
+</body>
+
+</html>
+
+
